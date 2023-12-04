@@ -89,7 +89,8 @@ fn main() {
         std::io::stdin().read_line(&mut input).unwrap();
 
         // 判断输入是否为纯数字
-        if is_str_numeric(&input.trim()) { // 输入是纯数字
+        if is_str_numeric(&input.trim()) {
+            // 输入是纯数字
             // 将输入转换为BigInt类型
             let message = input.trim().parse::<BigInt>().unwrap();
             println!("请输入要执行的操作(1为加密,2为解密,3为退出):");
@@ -121,7 +122,8 @@ fn main() {
                     continue;
                 }
             };
-        } else { // 输入不是纯数字
+        } else {
+            // 输入不是纯数字
             println!("密码必须是纯数字！");
             continue;
         }
