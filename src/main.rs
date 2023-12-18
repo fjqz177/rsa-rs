@@ -84,9 +84,15 @@ fn main() {
 
     loop {
         // 此处应使用实际的用户输入，注意需要处理错误和异常的输入
-        println!("请输入要加密或解密的数字:");
+        println!("请输入要加密或解密的数字（输入0退出）:");
         let mut input = String::new();
         std::io::stdin().read_line(&mut input).unwrap();
+
+        //如果输入为0则退出程序
+        if input.trim() == "0" {
+            println!("退出程序");
+            break;
+        }
 
         // 判断输入是否为纯数字
         if is_str_numeric(&input.trim()) {
