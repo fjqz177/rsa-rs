@@ -9,7 +9,7 @@ fn ext_gcd(a: &BigInt, b: &BigInt) -> (BigInt, BigInt, BigInt) {
     } else {
         let (r, x1, y1) = ext_gcd(b, &(a % b));
         let x = y1.clone();
-        let y = x1 - ((a / b) * &y1);
+        let y = x1 - ((a / b) * y1);
         (r, x, y)
     }
 }
